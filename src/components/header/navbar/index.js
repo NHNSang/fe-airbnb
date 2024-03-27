@@ -30,11 +30,11 @@ const Header = () => {
         },
       ];
   return (
-    <div className='fixed left-0 right-0 top-0 max-w-[1920px] mx-auto w-full xl:px-20 px-4 py-4'>
+    <div className='sticky z-50 left-0 right-0 top-0 max-w-[1920px] mx-auto w-full xl:px-20 px-4 py-4 bg-white'>
         <Row className="flex items-center">
             {/*  */}
             <Col xs={24} xl={4}>
-            <div className="flex items-center cursor-pointer">
+            <div className="flex justify-center items-center cursor-pointer">
                 <img  src={Logo} alt="logo" width='50' height='50'/>
             </div>
             </Col>
@@ -64,7 +64,7 @@ const Header = () => {
 
             {/*  */}
             <Col xs={24} xl={6}>
-                <div className='flex items-center justify-end gap-3'>
+                <div className='flex items-center justify-center gap-3'>
                 <div className='border bg-[#007882] px-4 py-[9px] rounded-lg 	'>
                     <Link to={''} >
                         <p className='font-sans text-white dark:text-gray-200 duration-100 font-bold'>I'm a host</p>
