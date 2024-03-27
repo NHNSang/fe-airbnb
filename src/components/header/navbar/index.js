@@ -67,7 +67,7 @@ const Header = () => {
                 <div className='flex items-center justify-center gap-3'>
                 <div className='border bg-[#007882] px-4 py-[9px] rounded-lg 	'>
                     <Link to={''} >
-                        <p className='font-sans text-white dark:text-gray-200 duration-100 font-bold'>I'm a host</p>
+                        <p className='font-sans text-white dark:text-gray-200 duration-100 font-bold'>Add Listing</p>
                     </Link>
                 </div>
                 <ThemeToggle/>
