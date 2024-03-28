@@ -7,7 +7,7 @@ import Banner from "../../components/banner";
 export default function DefaultLayoutUser() {
     return (
       <StyleProvider hashPriority="high">
-        <main className="dark:text-gray-200 dark:bg-slate-900 duration-100">
+        <main className="dark:text-gray-200 dark:bg-[#007882] duration-100">
         <Header />
         <User/>
         <Footer />  

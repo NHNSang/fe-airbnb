@@ -44,7 +44,7 @@ const Header = () => {
             <Col xs={24} xl={14}>
             <div className='flex justify-center'>
             <ul
-            className={`relative hidden items-start space-x-0 space-y-10 lg:flex lg:items-center lg:space-x-[2.75rem] lg:space-y-0 2xl:space-x-8 3xl:space-x-[60px]`}
+            className={`relative text-black hidden items-start space-x-0 space-y-10 lg:flex lg:items-center lg:space-x-[2.75rem] lg:space-y-0 2xl:space-x-8 3xl:space-x-[60px]`}
           >
             {routes.map((x) => (
               <li
@@ -55,7 +55,7 @@ const Header = () => {
                 className={`group relative cursor-pointer font-sans text-lg leading-[24px] tracking-wider transition duration-300 lg:text-base lg:leading-5 xl:text-[20px] xl:leading-[22px]`}
               >
                 {(x.name)}
-                <span className="block h-1 max-w-0 bg-[#FA4613] transition-all duration-700 group-hover:max-w-full"></span>
+                <span className="block h-1 max-w-0 bg-[#FF385C] transition-all duration-700 group-hover:max-w-full"></span>
               </li>
             ))}
           </ul>
