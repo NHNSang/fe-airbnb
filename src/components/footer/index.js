@@ -17,14 +17,14 @@ import { Link } from "react-router-dom";
 const Footer = React.memo(() => {
   const { isMobile } = useDevice();
   return (
-    <footer className="bg-[#ECECEC] mt-[900px]">
+    <footer className="bg-[#007882] dark:bg-white mt-[50px]">
       <div className="container mx-auto">
         <div className={isMobile ? "container px-8" : "container"}>
           <Row>
             <Col xs={24} xl={6}>
               <div className="mt-5">
                 {/* logo */}
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center pt-10">
                   <Link href="/">
                     <div
                       className={
@@ -41,7 +41,7 @@ const Footer = React.memo(() => {
                       />
                     </div>
                   </Link>
-                  <p className="inline-block align-middle font-montserrat text-2xl font-bold text-red-500	">
+                  <p className="inline-block align-middle font-montserrat text-2xl font-bold text-[#FF385C]	">
                     AirBnb
                   </p>
                 </div>
@@ -55,7 +55,7 @@ const Footer = React.memo(() => {
             </Col>
             <Col xs={24} xl={4}>
               <div className={isMobile ? "relative" : "relative mt-8"}>
-                <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-black">
+                <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-white dark:text-black">
                 Quick links
                 </p>
                 {/* text */}
@@ -66,7 +66,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Discovery
                         </p>
                       </Link>
@@ -76,7 +76,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Blog
                         </p>
                       </Link>
@@ -86,7 +86,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Help center
                         </p>
                       </Link>
@@ -96,7 +96,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Listings
                         </p>
                       </Link>
@@ -114,7 +114,7 @@ const Footer = React.memo(() => {
             </Col>
             <Col xs={24} xl={4}>
               <div className={isMobile ? "relative" : "relative ml-3 mt-8"}>
-                <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-black">
+                <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-white dark:text-black">
                 Quick links
                 </p>
                 {/* text */}
@@ -125,7 +125,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Discovery
                         </p>
                       </Link>
@@ -135,7 +135,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Blog
                         </p>
                       </Link>
@@ -145,7 +145,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Help center
                         </p>
                       </Link>
@@ -155,7 +155,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Listings
                         </p>
                       </Link>
@@ -173,7 +173,7 @@ const Footer = React.memo(() => {
             </Col>
             <Col xs={24} xl={4}>
               <div className={isMobile ? "relative" : "relative ml-3 mt-8"}>
-                <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-black">
+                <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-white dark:text-black">
                 Quick links
                 </p>
                 {/* text */}
@@ -184,7 +184,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Discovery
                         </p>
                       </Link>
@@ -194,7 +194,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Blog
                         </p>
                       </Link>
@@ -204,7 +204,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Help center
                         </p>
                       </Link>
@@ -214,7 +214,7 @@ const Footer = React.memo(() => {
                         href=""
                         className="cusor-pointer mt-3"
                       >
-                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-[#42495B]">
+                        <p className="font-sansFrancisco  text-sm font-normal leading-6 tracking-[0.03em] text-white dark:text-black">
                         Listings
                         </p>
                       </Link>
@@ -232,7 +232,7 @@ const Footer = React.memo(() => {
             </Col>
             <Col xs={24} xl={6}>
               <div className={isMobile ? "relative mb-8" : "relative my-8"}>
-                <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-black">
+                <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-white dark:text-black">
                   Follow us
                 </p>
                 {/* video */}
@@ -304,10 +304,10 @@ const Footer = React.memo(() => {
           </Row>
         </div>
 
-        <div className="h-[1px] bg-[#FA4613]"></div>
+        <div className="h-[1px] bg-[#f5e4e4]"></div>
         <div className={isMobile ? "mb-5" : undefined}>
-          <p className=" mb-1 mt-1 text-center font-sansFrancisco text-sm font-normal italic leading-6 tracking-[0.03em] text-[#42495B]">
-            @ Bản quyền thuộc Homicen Group 2024
+          <p className=" mb-1 mt-1 text-center font-sansFrancisco text-sm font-normal italic leading-6 tracking-[0.03em] text-white dark:text-black">
+          © 2024 Airbnb, Inc
           </p>
         </div>
       </div>

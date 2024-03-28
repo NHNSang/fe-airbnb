@@ -41,7 +41,7 @@ const ThemeToggle = () => {
   return (
     <div className='top-5 right-10 duration-100 darks:slate-200 ' > 
         {option.map((x) => (
-            <button key={x.text} className={`w-10 h-10 text-xl rounded-lg m-1 border duration-100 darks:slate-200 ${x.text === 'light' ? '	' : 'border-black'}`} onClick={() => setTheme(x.text)}>
+            <button key={x.text} className={`w-10 h-10 text-xl rounded-lg m-1 border duration-100 darks:slate-200 ${x.text === 'light' ? 'border-black text-black' : 'border-black'}`} onClick={() => setTheme(x.text)}>
                 {x.icon}
             </button>
         ))}

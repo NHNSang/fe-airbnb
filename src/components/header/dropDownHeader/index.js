@@ -25,12 +25,12 @@ const DropDownHeader = () => {
     },
   ];
   return (
-    <div className='border px-4 py-[7px] rounded-2xl	border-black	 dark:border-white'>
+    <div className='border px-4 py-[7px] rounded-2xl	border-black'>
       <Dropdown menu={{ items }} placement="bottom" arrow>
         <Link onClick={(e) => e.preventDefault()}>
           <Space>
-            <MenuOutlined className='text-black dark:text-white'/>
-            <UserOutlined className='text-black dark:text-white' style={{fontSize: '25px'}}/>
+            <MenuOutlined className='text-black '/>
+            <UserOutlined className='text-black ' style={{fontSize: '25px'}}/>
            
           </Space>
         </Link>

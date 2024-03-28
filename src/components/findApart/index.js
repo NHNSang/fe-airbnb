@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const FindApart = () => {
   return (
-    <div className='bg-[#007882] mt-8'>
+    <div className='bg-[#007882] dark:bg-white mt-8'>
       <div className='container mx-auto py-10'>
         <Row>
             <Col xs={24} xl={12} className='flex justify-center'>
@@ -15,15 +15,15 @@ const FindApart = () => {
             </Col>
             <Col xs={24} xl={12}>
                 <div>
-                    <h1 className='text-white text-[50px] font-semibold	mb-7'>Find ideal apartment for vacation</h1>
-                    <p className='text-white text-[30px] italic'>Free cost for commision</p>
-                    <p className='text-white text-[30px] italic'>Safe payment</p>
-                    <p className='text-white text-[30px] italic'>Find guest quickly</p>
-                    <p className='text-white text-[25px] italic mt-7'> Place not as promised? Tell us within 48 hours of moving in, and we'll help you.</p>
-                    <div className='flex text-white text-[30px] gap-3 mt-7 font-medium	'>
+                    <h1 className='text-white dark:text-black text-[50px] font-semibold	mb-7'>Find ideal apartment for vacation</h1>
+                    <p className='text-white dark:text-black text-[30px] italic'>Free cost for commision</p>
+                    <p className='text-white dark:text-black text-[30px] italic'>Safe payment</p>
+                    <p className='text-white dark:text-black text-[30px] italic'>Find guest quickly</p>
+                    <p className='text-white  dark:text-black text-[25px] italic mt-7'> Place not as promised? Tell us within 48 hours of moving in, and we'll help you.</p>
+                    <div className='flex text-white dark:text-black text-[30px] gap-3 mt-7 font-medium	'>
                     <h3>Are you looking for room? </h3>
                     <Link to={''}>
-                        <p className='text-white underline'>Sign up</p>
+                        <p className='text-white dark:text-black underline'>Sign up</p>
                     </Link>
                     </div>
                 </div>
