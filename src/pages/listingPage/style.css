@@ -1,0 +1,11 @@
+
+button.ant-btn.css-dev-only-do-not-override-42nv3w.ant-btn-default.ant-dropdown-trigger {
+    background-color:white !important
+}
+
+button.ant-btn.css-dev-only-do-not-override-42nv3w.ant-btn-default.ant-dropdown-trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+}
