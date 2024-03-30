@@ -7,7 +7,7 @@ import Style from './style.css'
 
 
 
-const DropdownBanner = () => {
+const DropdownSearch = () => {
     const [visible, setVisible] = useState(false);
     const [numAdoult, setNumAdoult] = useState(0)
     const [numChildren, setNumChildren] = useState(0)
@@ -18,7 +18,7 @@ const DropdownBanner = () => {
         setNumChildren(numChildren);
         setNumBaby(numBaby);
     }, [numAdoult, numChildren, numBaby])
-    
+
     const handleDropdownVisibleChange = (flag) => {
         setVisible(flag);
     };
@@ -123,11 +123,9 @@ const DropdownBanner = () => {
                 onVisibleChange={handleDropdownVisibleChange}>
                 {showButton ? (
                     <button onClick={handleAddMoreClick} className='bg-[#f3f4f5] h-[50px] text-[15px] rounded-md px-3 '>
-                        <p className='line-clamp-1	'>{numAdoult} adult, {numChildren} Children, {numBaby} baby</p>
+                        <p className='line-clamp-1'>{numAdoult} adult, {numChildren} Children, {numBaby} baby</p>
                     </button>
-                    // <Button>{numAdoult} adult, {numChildren} Children, {numBaby} baby</Button>
                 ) : (
-                    // <Button onClick={handleAddMoreClick} className={Style}>Thêm khách</Button>
                     <button onClick={handleAddMoreClick} className='bg-[#f3f4f5] h-[50px] text-[#d9d9d9] text-[15px] rounded-md px-3 w-[133px]'>Thêm khách</button>
                 )}
             </Dropdown>
@@ -135,4 +133,4 @@ const DropdownBanner = () => {
     )
 }
 
-export default DropdownBanner
+export default DropdownSearch
