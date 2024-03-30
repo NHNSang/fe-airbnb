@@ -8,9 +8,8 @@ export default function User() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/listings" element={<ListingPage   />} />
-
       <Route path="/detail-listing" element={<DetailListing />} />
-      
+
       
     </Routes>
   );
