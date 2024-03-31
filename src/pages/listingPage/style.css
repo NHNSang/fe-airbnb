@@ -8,4 +8,21 @@ button.ant-btn.css-dev-only-do-not-override-42nv3w.ant-btn-default.ant-dropdown-
     justify-content: center;
     align-items: center;
     padding: 15px 10px;
+    
+}
+button.slick-arrow.slick-prev {
+    left: 10px;
+    z-index: 10;
+}
+button.slick-arrow.slick-next{
+    right: 10px;
+    z-index: 10;
+}
+ul.slick-dots {
+    bottom: 5%;
+}
+.slick-dots li button:before{
+    font-size: 12px;
+    color: white;
+    padding: 0;
 }

@@ -1,15 +1,34 @@
 import React from 'react'
 import ListingCard from '../../components/listingCard/ListingCard'
-import CardImg from "../../assets/img/listingcard1.jpg";
 
 
-const ListingList = () => {
+const ListingList = ({
+  src,
+  alt,
+  title,
+  subtitle,
+  numberOfRoom,
+  numberofGuest,
+  numberOfBath,
+  starOfListing,
+  priceOfRoom
+}) => {
   return (
-    <ListingCard 
-    cardImg={CardImg}
-    title="title"
-    subtitle="subtitle"
-    />
+    
+      
+      <ListingCard 
+      src={src}
+      alt={alt}
+      title={title}
+      subtitle={subtitle}
+      numberOfRoom={numberOfRoom}
+      numberofGuest={numberofGuest}
+      numberOfBath={numberOfBath}
+      starOfListing={starOfListing}
+      priceOfRoom={priceOfRoom}
+      
+      />
+    
   )
 }
 
