@@ -1,23 +1,20 @@
 import React from "react";
-import FavoriteButton from '../../components/favoriteButton/FavoriteButton'
+import FavoriteButton from "../favoriteButton/FavoriteButton";
+import HeadingCard from "./HeadingCard";
+import ImgCard from "./ImgCard";
 
-const ListingCard = () => {
+const ListingCard = ({
+  cardImg,
+  title,
+  subtitle,
+}) => {
   return (
     <div className="  w-[270px] h-auto">
-      <div className="relative">
-      <img 
-      className="rounded-lg"
-      alt="list-card"
-      src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8" />
-      <div className='absolute right-10 top-1'><FavoriteButton /></div>
-      
-      </div>
-      
-      
-      <p>Studio Apartment son Tra Da ...</p>
-      <p>
-        Luxury apartment for vacation near beach and mountain, easy to reach ...
-      </p>
+      <ImgCard cardImg={cardImg} />
+      <HeadingCard 
+      title={title}
+      subtitle={subtitle}
+      />
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row justify-center items-center gap-3">
           <div className="flex flex-row items-center">
@@ -66,7 +63,17 @@ const ListingCard = () => {
         <div className="flex flex-row items-center">
           {/* rating  */}
           <p>5</p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 24 24"><path fill="#ddf335" d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z"/></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35px"
+            height="35px"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="#ddf335"
+              d="m7.325 18.923l1.24-5.313l-4.123-3.572l5.431-.47L12 4.557l2.127 5.01l5.43.47l-4.122 3.572l1.24 5.313L12 16.102z"
+            />
+          </svg>
         </div>
       </div>
     </div>
