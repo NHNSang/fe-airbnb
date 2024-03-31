@@ -9,6 +9,7 @@ import DisplayListing from "./DisplayListing";
 import MapView from "./MapView";
 import ListingList from "./ListingList";
 
+
 const ListingPage = () => {
   return (
     <div className="container mx-auto">
