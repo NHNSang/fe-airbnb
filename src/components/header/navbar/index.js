@@ -34,9 +34,11 @@ const Header = () => {
         <Row className="flex items-center">
             {/*  */}
             <Col xs={24} xl={4}>
+            <Link to={'/'}>
             <div className="flex justify-center items-center cursor-pointer">
                 <img  src={Logo} alt="logo" width='50' height='50'/>
             </div>
+            </Link>
             </Col>
 
 

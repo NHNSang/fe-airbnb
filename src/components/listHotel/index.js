@@ -52,6 +52,7 @@ const ListHotel = () => {
       <Slider {...settings}>
         {listData.map((data, index) => {
           return (
+            <Link to={'/detail-listing'}>
             <div key={index} className='mt-5'>
               <div className='relative w-[350px]'>
                 <div className='relative'>
@@ -93,6 +94,8 @@ const ListHotel = () => {
                 </div>
               </div>
             </div>
+            </Link>
+            
           )
         })}
       </Slider>

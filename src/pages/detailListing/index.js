@@ -5,7 +5,6 @@ import LongText from '../../components/longText';
 import Person from '../../assets/img/feeback1.jpg';
 import ReserveForm from '../../components/reserveForm';
 import './style.css'
-import ExploreApart from '../../components/exploreApart';
 import ListHotel from '../../components/listHotel';
 import ReviewGuest from '../../components/reviewGuest';
 
