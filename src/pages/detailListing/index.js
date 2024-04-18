@@ -5,9 +5,9 @@ import LongText from '../../components/longText';
 import Person from '../../assets/img/feeback1.jpg';
 import ReserveForm from '../../components/reserveForm';
 import './style.css'
-import ExploreApart from '../../components/exploreApart';
 import ListHotel from '../../components/listHotel';
 import ReviewGuest from '../../components/reviewGuest';
+import { useDevice } from '../../hook/useDevice';
 
 const DetailListing = () => {
 
@@ -16,64 +16,64 @@ const DetailListing = () => {
     const text_3 = 'Every room at this hotel is air conditioned and features a flat-screen TV. You will find a kettle in the room. Every room is equipped with a private bathroom fitted with a bidet. For your comfort, you will find slippers and free toiletries.'
     const text_4 = 'Every room at this hotel is air conditioned and features a flat-screen TV. You will find a kettle in the room. Every room is equipped with a private bathroom fitted with a bidet. For your comfort, you will find slippers and free toiletries.'
     const { RangePicker } = DatePicker;
+    const { isMobile } = useDevice();
 
     return (
         <div >
             <Divider />
             <div className='container mx-auto'>
-                <Row className='items-center'>
-                    <Col xs={24} xl={14} >
-                        <Breadcrumb
-                            separator=">"
-                            items={[
-                                {
-                                    title: <a href="/"   >Home  </a>,
-                                },
-                                {
-                                    title: <a href="" >Da Nag</a>,
-                                },
-                                {
-                                    title: <a href="" >Son Tra</a>,
-                                },
-                                {
-                                    title: <p className='text-[#007882] dark:text-white font-normal'>Studio Son Tra</p>,
-                                },
-                            ]}
-                        />
-                    </Col>
-                    <Col xs={24} xl={10}>
-                        <div className='flex items-center justify-end gap-3'>
-                            <button type="button" className='border rounded-lg border-black dark:border-white px-4 py-2 flex items-center gap-2'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 256 256"><path fill="currentColor" d="M240 94c0 70-103.79 126.66-108.21 129a8 8 0 0 1-7.58 0C119.79 220.66 16 164 16 94a62.07 62.07 0 0 1 62-62c20.65 0 38.73 8.88 50 23.89C139.27 40.88 157.35 32 178 32a62.07 62.07 0 0 1 62 62" /></svg>
-                                Save
-                            </button>
-                            <ShareModal />
-                        </div>
-                    </Col>
-                </Row>
+                <div className='items-center flex justify-between px-2 md:px-0 lg:px-0 '>
+                    <Breadcrumb
+                        separator=">"
+                        items={[
+                            {
+                                title: <a href="/"   >Home  </a>,
+                            },
+                            {
+                                title: <a href="" >Da Nag</a>,
+                            },
+                            {
+                                title: <a href="" >Son Tra</a>,
+                            },
+                            {
+                                title: <p className='text-[#007882] dark:text-white font-normal'>Studio Son Tra</p>,
+                            },
+                        ]}
+                    />
+                    <div className='flex items-center justify-end gap-3'>
+                        {isMobile ? <button type="button" className=''>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 256 256"><path fill="currentColor" d="M240 94c0 70-103.79 126.66-108.21 129a8 8 0 0 1-7.58 0C119.79 220.66 16 164 16 94a62.07 62.07 0 0 1 62-62c20.65 0 38.73 8.88 50 23.89C139.27 40.88 157.35 32 178 32a62.07 62.07 0 0 1 62 62" /></svg>
+                        </button> : <button type="button" className='border rounded-lg border-black dark:border-white px-4 py-2 flex items-center gap-2'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 256 256"><path fill="currentColor" d="M240 94c0 70-103.79 126.66-108.21 129a8 8 0 0 1-7.58 0C119.79 220.66 16 164 16 94a62.07 62.07 0 0 1 62-62c20.65 0 38.73 8.88 50 23.89C139.27 40.88 157.35 32 178 32a62.07 62.07 0 0 1 62 62" /></svg>
+                            Save
+                        </button>}
+                        <ShareModal />
+                    </div>
+                </div>
+
                 <div className='mt-5'>
                     <Row gutter={16}>
-                        <Col xs={24} xl={12} className=''>
-                            <img src={img_house} alt="img" className='object-cover rounded-tl-xl rounded-bl-xl h-[766px] w-full' />
+                        <Col xs={24} xl={12} className='mb-4'>
+                            <img src={img_house} alt="img" className='object-cover rounded-none md:rounded-none lg:rounded-tl-xl lg:rounded-bl-xl h-[350px] md:h-[766px] lg:h-[766px] w-full px-2 md:px-0 lg:px-0 ' />
                         </Col>
-                        <Col xs={24} xl={12} className=''>
+                        <Col xs={24} xl={12} >
                             <Row gutter={[16, 16]}>
-                                <Col xs={24} xl={12}><img src={img_house} alt="img" className='object-cover w-full h-[375px] ' /></Col>
-                                <Col xs={24} xl={12}><img src={img_house} alt="img" className='object-cover w-full h-[375px]' /></Col>
-                                <Col xs={24} xl={12}><img src={img_house} alt="img" className='object-cover w-full h-[375px] ' /></Col>
-                                <Col xs={24} xl={12}><img src={img_house} alt="img" className='object-cover w-full h-[375px]' /></Col>
+                                <Col xs={12} sm={12} xl={12}><img src={img_house} alt="img" className='object-cover w-full h-[165px] md:h-[375px] lg:h-[375px] pl-2 md:px-0 lg:px-0' /></Col>
+                                <Col xs={12} sm={12} xl={12}><img src={img_house} alt="img" className='object-cover w-full h-[165px] md:h-[375px] lg:h-[375px] pr-2 md:px-0 lg:px-0 rounded-none md:rounded-none lg:rounded-tr-xl' /></Col>
+                                <Col xs={12} sm={12} xl={12}><img src={img_house} alt="img" className='object-cover w-full h-[165px] md:h-[375px] lg:h-[375px] pl-2 md:px-0 lg:px-0' /></Col>
+                                <Col xs={12} sm={12} xl={12}><img src={img_house} alt="img" className='object-cover w-full h-[165px] md:h-[375px] lg:h-[375px] pr-2 md:px-0 lg:px-0 rounded-none md:rounded-none lg:rounded-br-xl' /></Col>
                             </Row>
 
                         </Col>
                     </Row>
                 </div>
-                <div className='mt-5'>
+                <div className='mt-5 px-2'>
                     {/* left */}
                     <Row >
                         <Col xs={24} xl={15} className=''>
                             <p className='flex text-xl'>Apartment in <span className='underline ml-1'> Son Tra, Da Nang</span></p>
                             <p className='text-3xl font-medium mt-3'>Stylish Urban Retreat: West LDN!</p>
-                            <div className='flex text-lg mt-2'>
+                            <div className='md:flex lg:flex text-lg mt-2'>
                                 <p>• 2 bedrooms</p>
                                 <p>• 2 beds  </p>
                                 <p>• 2 bathroom     </p>
@@ -88,7 +88,7 @@ const DetailListing = () => {
                             <p className='text-2xl font-medium'>Overview</p>
                             <p className='text-lg mt-2'>Property Information</p>
                             <Row className='mt-5' >
-                                <Col xs={24} xl={6}>
+                                <Col xs={12} sm={12} xl={6}>
                                     <div className='flex'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 1408 1792"><path fill="currentColor" d="M1344 0q26 0 45 19t19 45v1664q0 26-19 45t-45 19H64q-26 0-45-19t-19-45V64q0-26 19-45T64 0zM512 288v64q0 14 9 23t23 9h64q14 0 23-9t9-23v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23m0 256v64q0 14 9 23t23 9h64q14 0 23-9t9-23v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23m0 256v64q0 14 9 23t23 9h64q14 0 23-9t9-23v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23m0 256v64q0 14 9 23t23 9h64q14 0 23-9t9-23v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23m-128 320v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m512 1280v-192q0-14-9-23t-23-9H544q-14 0-23 9t-9 23v192q0 14 9 23t23 9h320q14 0 23-9t9-23m0-512v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m256 1024v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23m0-256v-64q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v64q0 14 9 23t23 9h64q14 0 23-9t9-23" /></svg>
                                         <p className='text-lg pt-[2px] pl-[5px]'>2 floor</p>
@@ -104,7 +104,7 @@ const DetailListing = () => {
                                         <p className='text-lg pt-[2px] pl-[5px]'>No parking</p>
                                     </div>
                                 </Col>
-                                <Col xs={24} xl={6}>
+                                <Col xs={12} sm={12} xl={6}>
                                     {/*  */}
                                     <div className='flex'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 20 20"><path fill="currentColor" d="M10.53 2.22a.75.75 0 0 0-1.06 0L7.22 4.47a.75.75 0 0 0 1.06 1.06l.97-.97v2.69a.75.75 0 0 0 1.5 0V4.56l.97.97a.75.75 0 1 0 1.06-1.06zM2.22 9.47a.75.75 0 0 0 0 1.06l2.25 2.25a.75.75 0 0 0 1.06-1.06l-.97-.97h2.69a.75.75 0 0 0 0-1.5H4.56l.97-.97a.75.75 0 0 0-1.06-1.06zm8.31 8.31l2.25-2.25a.75.75 0 1 0-1.06-1.06l-.97.97v-2.69a.75.75 0 0 0-1.5 0v2.69l-.97-.97a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.06 0m5-10.56l2.25 2.25a.75.75 0 0 1 0 1.06l-2.25 2.25a.75.75 0 1 1-1.06-1.06l.97-.97h-2.69a.75.75 0 0 1 0-1.5h2.69l-.97-.97a.75.75 0 0 1 1.06-1.06" /></svg>
@@ -119,7 +119,7 @@ const DetailListing = () => {
                             </Row>
                             <p className='text-xl mt-5'>Rooms & Sleeping Arrangements</p>
                             <Row gutter={16} className='mt-5'>
-                                <Col xs={24} xl={5} >
+                                <Col xs={12} sm={8} xl={5} >
                                     <div className='flex justify-around items-center border border-gray-400 rounded-lg p-4'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 24 24"><path fill="currentColor" d="M19 8c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v2h6zm-8 0c0-.55-.45-1-1-1H6c-.55 0-1 .45-1 1v2h6zm8 4H5c-.55 0-1 .45-1 1v2h16v-2c0-.55-.45-1-1-1" opacity="0.3" /><path fill="currentColor" d="M21 10.78V8c0-1.65-1.35-3-3-3h-4c-.77 0-1.47.3-2 .78c-.53-.48-1.23-.78-2-.78H6C4.35 5 3 6.35 3 8v2.78c-.61.55-1 1.34-1 2.22v6h2v-2h16v2h2v-6c0-.88-.39-1.67-1-2.22M13 8c0-.55.45-1 1-1h4c.55 0 1 .45 1 1v2h-6zM5 8c0-.55.45-1 1-1h4c.55 0 1 .45 1 1v2H5zm15 7H4v-2c0-.55.45-1 1-1h14c.55 0 1 .45 1 1z" /></svg>
                                         <div>
@@ -128,7 +128,7 @@ const DetailListing = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col xs={24} xl={5} >
+                                <Col xs={12} sm={8} xl={5} >
                                     <div className='flex justify-around items-center border border-gray-400 rounded-lg p-4'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M21 14v1c0 1.91-1.07 3.57-2.65 4.41L19 22h-2l-.5-2h-9L7 22H5l.65-2.59A4.987 4.987 0 0 1 3 15v-1H2v-2h18V5a1 1 0 0 0-1-1c-.5 0-.88.34-1 .79c.63.54 1 1.34 1 2.21h-6a3 3 0 0 1 3-3h.17c.41-1.16 1.52-2 2.83-2a3 3 0 0 1 3 3v9zm-2 0H5v1a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3z" /></svg>
                                         <div>
@@ -137,8 +137,8 @@ const DetailListing = () => {
                                         </div>
                                     </div>
                                 </Col>
-                                <Col xs={24} xl={5} >
-                                    <div className='flex justify-around items-center border border-gray-400 rounded-lg p-4'>
+                                <Col xs={12} sm={8} xl={5} >
+                                    <div className='flex justify-around items-center border border-gray-400 rounded-lg p-4 mt-4 md:mt-0 lg:mt-0 '>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24"><path fill="currentColor" d="M18 10V7c0-1.66-1.34-3-3-3s-3 1.34-3 3h2c0-.55.45-1 1-1s1 .45 1 1v3H8c1.1 0 2-.9 2-2V4H4v4c0 1.1.9 2 2 2H2v2h2v8h16v-8h2v-2zm-5 8h-2v-6h2z" /></svg>
                                         <div>
                                             <p className='text-lg font-medium'>Kitchen area</p>
@@ -150,7 +150,7 @@ const DetailListing = () => {
                             <Divider />
                             <p className='text-2xl font-medium'>Amenities</p>
                             <Row className='mt-5' >
-                                <Col xs={24} xl={6}>
+                                <Col xs={12} sm={12} xl={6}>
                                     <div className='flex'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="m12 21l3.6-4.8c-1-.75-2.25-1.2-3.6-1.2s-2.6.45-3.6 1.2zm0-18C7.95 3 4.21 4.34 1.2 6.6L3 9c2.5-1.88 5.62-3 9-3s6.5 1.12 9 3l1.8-2.4C19.79 4.34 16.05 3 12 3m0 6c-2.7 0-5.19.89-7.2 2.4l1.8 2.4C8.1 12.67 9.97 12 12 12c2.03 0 3.9.67 5.4 1.8l1.8-2.4C17.19 9.89 14.7 9 12 9" /></svg>
                                         <p className='text-lg pt-[2px] pl-[5px]'>wifi / Internet</p>
@@ -166,7 +166,7 @@ const DetailListing = () => {
                                         <p className='text-lg pt-[2px] pl-[5px]'>Fridge</p>
                                     </div>
                                 </Col>
-                                <Col xs={24} xl={6}>
+                                <Col xs={12} sm={12} xl={6}>
                                     {/*  */}
                                     <div className='flex'>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="M6 14h2l3 3H9zM4 4h1V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h2V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2v1h-3v-1H7v1H4v-1a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m14 3a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m-4 0a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m6-1H4v4h16zM4 19h16v-7H4zM6 7a1 1 0 0 1 1 1a1 1 0 0 1-1 1a1 1 0 0 1-1-1a1 1 0 0 1 1-1m7 7h2l3 3h-2z" /></svg>
@@ -193,9 +193,6 @@ const DetailListing = () => {
                                 </Col>
                             </Row>
                             <Divider />
-                            <p className='text-2xl font-medium mb-3'>Availability calendar</p>
-                            <RangePicker size='large' />
-                            <Divider />
                             <p className='text-2xl font-medium mb-3'>Location</p>
                             <p className='text-lg mt-2 flex'><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path d="M24 44s15-12 15-25c0-8.284-6.716-15-15-15c-8.284 0-15 6.716-15 15c0 13 15 25 15 25Z" /><path d="M24 25a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z" /></g></svg> <span className='ml-2 underline'>Son tra, Da Nang</span></p>
                             <div className='mt-3'>
@@ -204,20 +201,20 @@ const DetailListing = () => {
                             <Divider />
                             <p className='text-2xl font-medium mb-3'>Infomation about host</p>
                             <Row gutter={16} className='items-center'>
-                                <Col xs={24} xl={5} >
+                                <Col xs={24} sm={8} xl={8} >
                                     <div className='flex justify-center'>
-                                        <img src={Person} alt='person' className='rounded-full w-[80%]' />
+                                        <img src={Person} alt='person' className='rounded-full w-[30%] md:w-[45%] lg:w-[50%]' />
                                     </div>
                                 </Col>
-                                <Col xs={24} xl={8} >
-                                    <p className='text-lg font-medium'>Start date: <span className=' font-normal'> since nov 12 2024</span></p>
-                                    <p className='text-lg font-medium mt-3'>Number of listings:  <span className=' font-normal'> 10</span></p>
-                                    <p className='text-lg font-medium mt-3'>Response rate: <span className=' font-normal'> good</span></p>
+                                <Col xs={12} sm={8} xl={8} >
+                                    <p className='text-[15px] md:text-lg lg:text-lg font-medium mt-3 md:mt-0 lg:mt-0'>Start date: <span className=' font-normal'> since nov 12 2024</span></p>
+                                    <p className='text-[15px] md:text-lg lg:text-lg font-medium mt-3'>Number of listings:  <span className=' font-normal'> 10</span></p>
+                                    <p className='text-[15px] md:text-lg lg:text-lg font-medium mt-3'>Response rate: <span className=' font-normal'> good</span></p>
                                 </Col>
-                                <Col xs={24} xl={8} >
-                                    <p className='text-lg font-medium'>Level:  <span className=' font-normal'>Professional host</span></p>
-                                    <p className='text-lg font-medium mt-3'>Review from guests:<span className=' font-normal'> 4.96</span></p>
-                                    <p className='text-lg font-medium mt-3'>Languages:  <span className=' font-normal'>English</span></p>
+                                <Col xs={12} sm={8} xl={8} >
+                                    <p className='text-[15px] md:text-lg lg:text-lg font-medium mt-3 md:mt-0 lg:mt-0'>Level:  <span className=' font-normal'>Professional host</span></p>
+                                    <p className='text-[15px] md:text-lg lg:text-lg font-medium mt-3'>Review from guests:<span className=' font-normal'> 4.96</span></p>
+                                    <p className='text-[15px] md:text-lg lg:text-lg font-medium mt-3'>Languages:  <span className=' font-normal'>English</span></p>
                                 </Col>
 
                             </Row>
@@ -226,61 +223,94 @@ const DetailListing = () => {
 
                         </Col>
                         {/* right */}
-                        <Col xs={24} xl={9} className=''>
+                        <Col xs={24} xl={9} className='mt-8  lg:mt-0'>
                             <ReserveForm />
                         </Col>
                     </Row>
                 </div>
                 <Divider />
-                <p className='text-2xl font-medium mb-3'>Reviews from guests</p>
-                <div className='w-[60%] mx-auto'>
+                <p className='text-2xl font-medium mb-3 px-4 lg:px-0'>Reviews from guests</p>
+                <div className='md:w-[90%] lg:w-[60%] mx-auto px-4 lg:px-0'>
                     <Row>
-                        <Col xs={24} xl={8}>
+                        <Col xs={8} sm={8} xl={8}>
                             <div className='mt-[80px]'>
                                 <Progress type="circle" percent={60} format={() => '4.2 \n reviews'} strokeColor="#007882" />
                             </div>
                         </Col>
-                        <Col xs={24} xl={16}>
-                            <div className='flex items-center justify-between'>
-                                <p className='text-lg font-medium flex items-center'>5 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
-                                <p className='text-lg font-medium'>(105 reviews)</p>
-                            </div>
-                            <Progress percent={70} strokeColor="#007882" showInfo={false} />
-                            {/*  */}
-                            <div className='flex items-center justify-between'>
-                                <p className='text-lg font-medium flex items-center'>4 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
-                                <p className='text-lg font-medium'>(105 reviews)</p>
-                            </div>
-                            <Progress percent={70} strokeColor="#007882" showInfo={false} />
-                            {/*  */}
-                            <div className='flex items-center justify-between'>
-                                <p className='text-lg font-medium flex items-center'>3 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
-                                <p className='text-lg font-medium'>(105 reviews)</p>
-                            </div>
-                            <Progress percent={50} strokeColor="#007882" showInfo={false} />
-                            {/*  */}
-                            <div className='flex items-center justify-between'>
-                                <p className='text-lg font-medium flex items-center'>2 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
-                                <p className='text-lg font-medium'>(105 reviews)</p>
-                            </div>
-                            <Progress percent={80} strokeColor="#007882" showInfo={false} />
-                            {/*  */}
-                            <div className='flex items-center justify-between'>
-                                <p className='text-lg font-medium flex items-center'>1 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
-                                <p className='text-lg font-medium'>(105 reviews)</p>
-                            </div>
-                            <Progress percent={30} strokeColor="#007882" showInfo={false} />
-                            {/*  */}
+                        <Col xs={16} sm={16} xl={16}>
+                            {isMobile ? <>
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>5 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-sm font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={70} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>4 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-sm font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={70} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>3 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-sm font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={50} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>2 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-sm font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={80} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>1 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-sm font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={30} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                </> 
+                                : <><div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>5 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-lg font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={70} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>4 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-lg font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={70} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>3 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-lg font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={50} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>2 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-lg font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={80} strokeColor="#007882" showInfo={false} />
+                                {/*  */}
+                                <div className='flex items-center justify-between'>
+                                    <p className='text-lg font-medium flex items-center'>1 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="#f4e543" d="M14.43 10L12 2l-2.43 8H2l6.18 4.41L5.83 22L12 17.31L18.18 22l-2.35-7.59L22 10z" /></svg></p>
+                                    <p className='text-lg font-medium'>(105 reviews)</p>
+                                </div>
+                                <Progress percent={30} strokeColor="#007882" showInfo={false} />
+                                {/*  */}</>}
+                            
                         </Col>
                     </Row>
 
                 </div>
                 <Divider />
-                <ReviewGuest/>
+                <ReviewGuest />
                 <Divider />
-                <ListHotel/>
+                <ListHotel />
 
-                
+
 
 
             </div>

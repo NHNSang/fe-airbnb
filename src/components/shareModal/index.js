@@ -1,10 +1,13 @@
 import { Col, Modal, Row, message } from 'antd';
 import React, { useState } from 'react'
 import img_house from '../../assets/img/listingcard1.jpg'
+import { useDevice } from '../../hook/useDevice';
 
 const ShareModal = () => {
     const [messageApi, contextHolder] = message.useMessage();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const { isMobile } = useDevice();
+
 
     const showModal = () => {
         setIsModalOpen(true);
@@ -22,18 +25,21 @@ const ShareModal = () => {
     return (
         <div>
             {contextHolder}
-            <button onClick={showModal} type="button" className='border rounded-lg border-black dark:border-white px-4 py-2 flex items-center gap-2'>
+            {isMobile ? <button onClick={showModal} type="button" className=''>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81c1.66 0 3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65c0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92M18 4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1M6 13c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1m12 7.02c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1" /></svg>
+            </button> : <button onClick={showModal} type="button" className='border rounded-lg border-black dark:border-white px-4 py-2 flex items-center gap-2'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81c1.66 0 3-1.34 3-3s-1.34-3-3-3s-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65c0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92M18 4c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1M6 13c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1m12 7.02c-.55 0-1-.45-1-1s.45-1 1-1s1 .45 1 1s-.45 1-1 1" /></svg>
                 Share
-            </button>
+            </button>}
+
             <Modal title="Share this property" open={isModalOpen} footer={null} onCancel={handleCancel}>
                 <div className='mb-5'>
                     <Row>
-                        <Col xs={24} xl={6}>
-                            <img src={img_house} alt="img" className='w-[150px] h-[100px] object-cover rounded-lg' />
+                        <Col  xs={24} sm={6} xl={6}>
+                            <img src={img_house} alt="img" className='w-full md:w-[150px] lg:w-[150px] h-[350px] md:h-[100px] lg:h-[100px] object-cover rounded-lg' />
                         </Col>
-                        <Col xs={24} xl={18}>
-                            <div className='pl-4 pt-4'>
+                        <Col xs={24} sm={18}  xl={18}>
+                            <div className='pl-0 md:pl-4 lg:pl-4 pt-4'>
                                 <p className='font-medium'>Studio Son Tra, Da Nang</p>
                                 <p>2 rooms, 1 bath</p>
                                 <p className='flex items-center'>
@@ -45,7 +51,7 @@ const ShareModal = () => {
                     </Row>
                 </div>
                 <Row>
-                    <Col xs={24} xl={12}>
+                    <Col xs={12} sm={12} xl={12}>
                         <div className='pr-2'>
                             <button onClick={success} className=' border rounded-lg border-black pl-4 py-2 flex items-center gap-2 w-full'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V7zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3s3 1.34 3 3s-1.34 3-3 3m3-10H5V5h10z" /></svg>
@@ -53,7 +59,7 @@ const ShareModal = () => {
                             </button>
                         </div>
                     </Col>
-                    <Col xs={24} xl={12}>
+                    <Col xs={12} sm={12} xl={12}>
                         <div className="pl-2">
                             <a
                                 href="https://www.facebook.com/sharer/sharer.php?u=[https://www.airbnb.com.vn/?tab_id=home_tab&refinement_paths%5B%5D=%2Fhomes&search_mode=flex_destinations_search&flexible_trip_lengths%5B%5D=one_week&location_search=MIN_MAP_BOUNDS&monthly_start_date=2024-04-01&monthly_length=3&monthly_end_date=2024-07-01&price_filter_input_type=0&channel=EXPLORE&search_type=category_change&category_tag=Tag%3A8144]"

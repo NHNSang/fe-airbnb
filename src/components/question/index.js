@@ -74,12 +74,12 @@ const Question = () => {
     return (
         <div className='container mx-auto mt-8'>
             <div className='text-center'>
-                <p className=' text-[40px] font-medium'>Frequent question and answered</p>
+                <p className=' text-[24px]  md:text-[35px] lg:text-[55px] font-medium'>Frequent question and answered</p>
             </div>
-            <div className='w-[40%] mx-auto mt-5'>
+            <div className='w-[80%] md:w-[70%] lg:w-[40%] mx-auto mt-5'>
                 <Collapse items={items} defaultActiveKey={['key']} onChange={onChange} className={style} />
             </div>
-            <div className='flex justify-center text-black text-[20px] gap-3 mt-7 font-medium 	'>
+            <div className='lg:flex lg:justify-center text-center  text-black text-[18px] lg:text-[20px] gap-3 mt-7 font-medium 	'>
                     <h3>Are you being some trouble? </h3>
                     <Link to={''}>
                         <p className='text-black underline'>Let’s Visit our support center</p>

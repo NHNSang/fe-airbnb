@@ -122,11 +122,11 @@ const DropdownSearch = () => {
             <Dropdown className={Style} menu={{ items }} placement="bottomRight" trigger={['click']} visible={visible}
                 onVisibleChange={handleDropdownVisibleChange}>
                 {showButton ? (
-                    <button onClick={handleAddMoreClick} className='bg-[#f3f4f5] h-[50px] text-[15px] rounded-md px-3 '>
+                    <button onClick={handleAddMoreClick} className='bg-[#f3f4f5] h-[50px] text-[15px] rounded-md px-3 w-full md:lg:w-[180px] lg:w-[180px]'>
                         <p className='line-clamp-1'>{numAdoult} adult, {numChildren} Children, {numBaby} baby</p>
                     </button>
                 ) : (
-                    <button onClick={handleAddMoreClick} className='bg-[#f3f4f5] h-[50px] text-[#d9d9d9] text-[15px] rounded-md px-3 w-[133px]'>Thêm khách</button>
+                    <button onClick={handleAddMoreClick} className='bg-[#f3f4f5] h-[50px] text-[#d9d9d9] text-[15px] rounded-md px-3 w-full md:lg:w-[133px] lg:w-[133px]'>Thêm khách</button>
                 )}
             </Dropdown>
         </div>

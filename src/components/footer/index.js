@@ -22,7 +22,7 @@ const Footer = React.memo(() => {
         <div className={isMobile ? "container px-8" : "container"}>
           <Row>
             <Col xs={24} xl={6}>
-              <div className="mt-5">
+              <div className="my-5 ">
                 {/* logo */}
                 <div className="flex justify-center items-center pt-10">
                   <Link href="/">
@@ -53,7 +53,7 @@ const Footer = React.memo(() => {
                 </div> */}
               </div>
             </Col>
-            <Col xs={24} xl={4}>
+            <Col  xs={24} sm={8} xl={4}>
               <div className={isMobile ? "relative" : "relative mt-8"}>
                 <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-white dark:text-black">
                 Quick links
@@ -112,8 +112,8 @@ const Footer = React.memo(() => {
                 </div> */}
               </div>
             </Col>
-            <Col xs={24} xl={4}>
-              <div className={isMobile ? "relative" : "relative ml-3 mt-8"}>
+            <Col xs={24} sm={8} xl={4}>
+              <div className={isMobile ? "relative" : "relative mt-8"}>
                 <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-white dark:text-black">
                 Quick links
                 </p>
@@ -171,8 +171,8 @@ const Footer = React.memo(() => {
                 </div> */}
               </div>
             </Col>
-            <Col xs={24} xl={4}>
-              <div className={isMobile ? "relative" : "relative ml-3 mt-8"}>
+            <Col xs={24} sm={8} xl={4}>
+              <div className={isMobile ? "relative" : "relative mt-8"}>
                 <p className="font-cabiner mt-3 text-2xl font-semibold leading-[22px] tracking-wider text-white dark:text-black">
                 Quick links
                 </p>
