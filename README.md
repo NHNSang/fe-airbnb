@@ -24,6 +24,10 @@ git rebase --continue
 
 if Successfully rebased ==> done
 if not fix tiếp
+
+5)responsive
+Tiêu đề: text-[24px]  md:text-[35px] lg:text-[55px]
+Text: text-[18px] md:text-[22px] lg:text-[25px]
  -->
 
  ### `npm start`

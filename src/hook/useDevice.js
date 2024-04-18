@@ -4,6 +4,7 @@ export const useDevice = () => {
   const [windowWidth, setWindowWidth] = useState(0)
   const [windowHeight, setWindowHeight] = useState(0)
   const isTablet = windowWidth < 1024
+  const isHeader = windowWidth < 1200
   const isPcSD = windowWidth < 1650
   const isMobile = windowWidth < 768
 
@@ -26,6 +27,7 @@ export const useDevice = () => {
     isMobile,
     isPcSD,
     isTablet,
+    isHeader,
     windowWidth,
     windowHeight,
   }

@@ -1,0 +1,7 @@
+.slick-slide{
+    display: flex !important;
+    justify-content: center;
+}
+.slick-dots{
+    bottom: -12% !important;
+}
